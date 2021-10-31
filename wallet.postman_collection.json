@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "7b6fc29b-97c1-430b-a407-ad4dd8e1eafc",
+		"name": "wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8001/transactions/617d5cd2be615529146198ce?skip=2&limit=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wallet-project1.herokuapp.com/transactions?walletId=617ef9b0eeba2d001661f6fa&skip=0&limit=100",
+					"protocol": "https",
+					"host": [
+						"wallet-project1",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "walletId",
+							"value": "617ef9b0eeba2d001661f6fa"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8001/transact/617d5cd2be615529146198ce",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": -50.23429,\r\n    \"description\": \"Recharge\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wallet-project1.herokuapp.com/transact/617ef9b0eeba2d001661f6fa",
+					"protocol": "https",
+					"host": [
+						"wallet-project1",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"transact",
+						"617ef9b0eeba2d001661f6fa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8001/wallet/617d5cd2be615529146198ce",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wallet-project1.herokuapp.com/wallet/617ef9b0eeba2d001661f6fa",
+					"protocol": "https",
+					"host": [
+						"wallet-project1",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"wallet",
+						"617ef9b0eeba2d001661f6fa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8001/setup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"balance\": 110,\r\n    \"name\": \"Sid\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wallet-project1.herokuapp.com/setup",
+					"protocol": "https",
+					"host": [
+						"wallet-project1",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"setup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
